@@ -1,0 +1,65 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.0'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        // 配置信息
+        classpath 'me.tatarka:gradle-retrolambda:3.2.5'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    compileSdkVersion = 24;
+    buildToolsVersion = "24.0.3";
+    minSdkVersion = 15;
+    targetSdkVersion = 24;
+    versionCode = 1;
+    versionName = "1.0.0";
+    applicationId = "com.yueniapp.shop"
+}
+def supportVersion = "24.1.1";
+def picassoVersin = "2.5.2";
+def dagger2Version = "2.0.2";
+def dagger2Provided = "10.0-b28";
+//def gsonVersion = "2.0.0-beta4";
+def retrofitVersion = "2.0.1";
+def loggerVersion = "3.1.2";
+def rxAndroidVersion = "1.1.0";
+def umengVerion = "latest.integration";
+def materialVersion = "0.9.0.2";
+def bannerVerion = "2.0.5";
+project.ext {
+    libSupportAppcompat = "com.android.support:appcompat-v7:${supportVersion}";
+    libcompat = "com.android.support:appcompat-v7:${supportVersion}";
+    libMaterial = "com.android.support:design:${supportVersion}"
+    libPicasso = "com.squareup.picasso:picasso:${picassoVersin}";
+    libDagger2Compile = "com.google.dagger:dagger:${dagger2Version}";
+    libDagger2Provided = "com.google.dagger:dagger-compiler:${dagger2Version}";
+    libDagger2InjectProvided = "org.glassfish:javax.annotation:${dagger2Provided}";
+//    libGson = "com.squareup.retrofit2:converter-gson:${gsonVersion}";
+    libRetrofit = "com.squareup.retrofit2:retrofit:${retrofitVersion}";
+    libRxJava = "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}";
+    libLogger = "com.squareup.okhttp3:logging-interceptor:${loggerVersion}";
+    libRxAndroid = "io.reactivex:rxandroid:${rxAndroidVersion}";
+    libUmeng = "com.umeng.analytics:analytics:${umengVerion}";
+    libBanner = "com.bigkoo:convenientbanner:${bannerVerion}";
+//    libMaterial = "com.afollestad.material-dialogs:commons:${materialVersion}";
+}

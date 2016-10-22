@@ -1,0 +1,38 @@
+<resources>
+
+    <style name="ApplicationAppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/color_b2</item>
+    </style>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="home_main_viewgroup">
+        <item name="android:background">@color/color_b2</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">@dimen/dis_12sp</item>
+        <item name="android:textColor">@drawable/selector_home_color</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">@dimen/dis_4</item>
+        <item name="android:paddingTop">@dimen/dis_8</item>
+    </style>
+
+    <style name="mystyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/entry_in</item>
+        <item name="android:windowExitAnimation">@anim/exit_out</item>
+    </style>
+
+
+
+</resources>

@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt' // 注释处理
+apply plugin: 'me.tatarka.retrolambda'// lambda 表达式
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "com.taijielan.cookbook"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.compileSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    // 使用Java1.8
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile files('libs/xUtils-2.6.14.jar')
+    compile project(':xListView')
+    compile rootProject.ext.libSupportAppcompat
+    compile rootProject.ext.libcompat
+    compile rootProject.ext.libMaterial
+    compile rootProject.ext.libPicasso
+    compile rootProject.ext.libDagger2Compile
+    compile rootProject.ext.libDagger2Provided
+    compile rootProject.ext.libDagger2InjectProvided
+//    compile rootProject.ext.libGson
+    compile rootProject.ext.libRetrofit
+    compile rootProject.ext.libRxJava
+    compile rootProject.ext.libLogger
+    compile rootProject.ext.libRxAndroid
+    compile rootProject.ext.libUmeng
+    compile rootProject.ext.libBanner
+    compile files('libs/SocialSDK_QQZone_3.jar')
+    compile files('libs/SocialSDK_WeiXin_1.jar')
+    compile files('libs/SocialSDK_WeiXin_2.jar')
+    compile files('libs/umeng_social_sdk.jar')
+    compile files('libs/jsoup-1.7.2.jar')
+    compile 'com.squareup.retrofit2:converter-scalars:2.0.0'
+}
