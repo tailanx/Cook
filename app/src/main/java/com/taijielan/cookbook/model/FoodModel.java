@@ -1,7 +1,7 @@
 package com.taijielan.cookbook.model;
 
 import com.taijielan.cookbook.api.IApi;
-import com.taijielan.cookbook.base.u.ParamUtil;
+import com.taijielan.cookbook.base.u.MySubScribe;
 import com.taijielan.cookbook.base.u.ParseUrl;
 import com.taijielan.cookbook.bean.BannerBean;
 import com.taijielan.cookbook.bean.CookBean;
@@ -12,7 +12,6 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
@@ -86,21 +85,4 @@ public class FoodModel implements IFoodModel {
     }
 
 
-    class MySubScribe<T> extends Subscriber<T> {
-
-        @Override
-        public void onCompleted() {
-
-        }
-
-        @Override
-        public void onError(Throwable e) {
-
-        }
-
-        @Override
-        public void onNext(T o) {
-
-        }
-    }
 }

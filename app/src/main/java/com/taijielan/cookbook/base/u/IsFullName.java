@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.text.TextUtils;
 
-
 import com.taijielan.cookbook.R;
 
 import java.util.regex.Pattern;
@@ -128,6 +127,17 @@ public class IsFullName {
             flag = true;
         }
         return flag;
+    }
+
+    public static boolean isNotNullSearch(Context context, String s) {
+        boolean flag = false;
+        if (TextUtils.isEmpty(s)) {
+            setTip(context, context.getString(R.string.search_content_null));
+        } else {
+            flag = true;
+        }
+        return flag;
+
     }
 
     /**

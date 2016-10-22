@@ -9,8 +9,10 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebView;
 
 import com.taijielan.cookbook.R;
@@ -136,6 +138,29 @@ public class ViewUtil {
         windowManager.width = ViewUtil.getDisplayMetrics(context).widthPixels;
         window.setAttributes(windowManager);
         dialog.setCanceledOnTouchOutside(true);
+    }
+
+    /**
+     * 隐藏软键盘
+     *
+     * @param context
+     * @param view
+     */
+    public static void hideSoftInput(Context context, View view) {
+        InputMethodManager inputMethodManager = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
+    }
+
+    /***
+     * 显示软键盘
+     *
+     * @param context
+     * @param view
+     */
+    public static void showSoftInput(Context context, View view) {
+        InputMethodManager inputMethodManager = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputMethodManager.showSoftInput(view, InputMethodManager.SHOW_FORCED);
+
     }
 
 

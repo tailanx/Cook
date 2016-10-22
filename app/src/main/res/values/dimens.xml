@@ -6,6 +6,7 @@
     <dimen name="dis_14sp">14sp</dimen>
     <dimen name="dis_16sp">16sp</dimen>
     <dimen name="dis_half">0.5dp</dimen>
+    <dimen name="dis_1">1dp</dimen>
     <dimen name="dis_4">4dp</dimen>
     <dimen name="dis_6">6dp</dimen>
     <dimen name="dis_8">8dp</dimen>

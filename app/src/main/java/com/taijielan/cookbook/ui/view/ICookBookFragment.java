@@ -2,7 +2,6 @@ package com.taijielan.cookbook.ui.view;
 
 import com.taijielan.cookbook.bean.BannerBean;
 import com.taijielan.cookbook.bean.CookBean;
-import com.taijielan.cookbook.bean.FoodGeneralItem;
 
 import java.util.List;
 

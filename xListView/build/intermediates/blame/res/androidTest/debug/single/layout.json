@@ -4,6 +4,18 @@
         "source": "C:\\Users\\admin\\Desktop\\study\\CookBook\\xListView\\build\\intermediates\\bundles\\debug\\res\\layout\\xlistview_header.xml"
     },
     {
+        "merged": "F:\\study\\Cook\\xListView\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\xlistview_header.xml",
+        "source": "F:\\study\\Cook\\xListView\\build\\intermediates\\bundles\\debug\\res\\layout\\xlistview_header.xml"
+    },
+    {
+        "merged": "F:\\study\\Cook\\xListView\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\list_item.xml",
+        "source": "F:\\study\\Cook\\xListView\\build\\intermediates\\bundles\\debug\\res\\layout\\list_item.xml"
+    },
+    {
+        "merged": "F:\\study\\Cook\\xListView\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\main.xml",
+        "source": "F:\\study\\Cook\\xListView\\build\\intermediates\\bundles\\debug\\res\\layout\\main.xml"
+    },
+    {
         "merged": "C:\\Users\\admin\\Desktop\\study\\CookBook\\xListView\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\xlistview_footer.xml",
         "source": "C:\\Users\\admin\\Desktop\\study\\CookBook\\xListView\\build\\intermediates\\bundles\\debug\\res\\layout\\xlistview_footer.xml"
     },
@@ -14,5 +26,9 @@
     {
         "merged": "C:\\Users\\admin\\Desktop\\study\\CookBook\\xListView\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\main.xml",
         "source": "C:\\Users\\admin\\Desktop\\study\\CookBook\\xListView\\build\\intermediates\\bundles\\debug\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "F:\\study\\Cook\\xListView\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\xlistview_footer.xml",
+        "source": "F:\\study\\Cook\\xListView\\build\\intermediates\\bundles\\debug\\res\\layout\\xlistview_footer.xml"
     }
 ]

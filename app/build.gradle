@@ -18,6 +18,13 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
+        debug{
+            buildConfigField("Boolean","DEBUG_MODE","true")
+        }
+        release{
+            buildConfigField("Boolean","DEBUG_MODE","false")
+        }
     }
     // 使用Java1.8
     compileOptions {
@@ -41,7 +48,7 @@ dependencies {
     compile rootProject.ext.libDagger2Compile
     compile rootProject.ext.libDagger2Provided
     compile rootProject.ext.libDagger2InjectProvided
-//    compile rootProject.ext.libGson
+    compile rootProject.ext.libGson
     compile rootProject.ext.libRetrofit
     compile rootProject.ext.libRxJava
     compile rootProject.ext.libLogger

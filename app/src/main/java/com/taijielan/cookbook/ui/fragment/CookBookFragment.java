@@ -44,7 +44,7 @@ public class CookBookFragment extends BaseFramgment implements ICookBookFragment
     /**
      * 食品种类
      */
-    private int lm = 13;
+    private int lm = 2;
     /**
      * update 是更新 renqi 是最热
      */

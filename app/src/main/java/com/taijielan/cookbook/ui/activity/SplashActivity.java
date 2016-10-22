@@ -2,6 +2,7 @@ package com.taijielan.cookbook.ui.activity;
 
 import android.content.Intent;
 import android.os.Handler;
+import android.view.WindowManager;
 
 import com.taijielan.cookbook.R;
 
@@ -16,6 +17,10 @@ import com.taijielan.cookbook.R;
  */
 
 public class SplashActivity extends BaseActivity {
+    @Override
+    public void setConfig() {
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    }
 
     @Override
     public int getView() {

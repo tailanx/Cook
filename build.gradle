@@ -39,7 +39,7 @@ def supportVersion = "24.1.1";
 def picassoVersin = "2.5.2";
 def dagger2Version = "2.0.2";
 def dagger2Provided = "10.0-b28";
-//def gsonVersion = "2.0.0-beta4";
+def gsonVersion = "2.0.0-beta4";
 def retrofitVersion = "2.0.1";
 def loggerVersion = "3.1.2";
 def rxAndroidVersion = "1.1.0";
@@ -54,7 +54,7 @@ project.ext {
     libDagger2Compile = "com.google.dagger:dagger:${dagger2Version}";
     libDagger2Provided = "com.google.dagger:dagger-compiler:${dagger2Version}";
     libDagger2InjectProvided = "org.glassfish:javax.annotation:${dagger2Provided}";
-//    libGson = "com.squareup.retrofit2:converter-gson:${gsonVersion}";
+    libGson = "com.squareup.retrofit2:converter-gson:${gsonVersion}";
     libRetrofit = "com.squareup.retrofit2:retrofit:${retrofitVersion}";
     libRxJava = "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}";
     libLogger = "com.squareup.okhttp3:logging-interceptor:${loggerVersion}";

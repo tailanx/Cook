@@ -34,4 +34,5 @@ public class ApiModule {
                 addCallAdapterFactory(RxJavaCallAdapterFactory.create()).
                 client(okHttpClient).build().create(IApi.class);
     }
+
 }

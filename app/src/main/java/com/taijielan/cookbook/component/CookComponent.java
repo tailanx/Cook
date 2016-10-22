@@ -5,9 +5,10 @@ import android.view.LayoutInflater;
 
 import com.taijielan.cookbook.CookApplication;
 import com.taijielan.cookbook.api.IApi;
-import com.taijielan.cookbook.model.FoodModel;
+import com.taijielan.cookbook.api.SearchApi;
 import com.taijielan.cookbook.module.ApiModule;
 import com.taijielan.cookbook.module.AppModule;
+import com.taijielan.cookbook.module.TianGouModule;
 import com.taijielan.cookbook.ui.activity.BaseActivity;
 import com.taijielan.cookbook.ui.fragment.BaseFramgment;
 
@@ -26,7 +27,7 @@ import okhttp3.OkHttpClient;
  * @修改内容
  */
 @Singleton
-@Component(modules = {AppModule.class, ApiModule.class})
+@Component(modules = {AppModule.class, ApiModule.class, TianGouModule.class})
 public interface CookComponent {
 
     void inject(CookApplication application);
@@ -44,6 +45,8 @@ public interface CookComponent {
     LayoutInflater getLayoutInflater();
 
     OkHttpClient getOkhttpClient();
+
+    SearchApi getSearch();
 
 
 }

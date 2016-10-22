@@ -2,12 +2,11 @@ package com.taijielan.cookbook.module;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
-import android.support.v7.appcompat.BuildConfig;
 import android.view.LayoutInflater;
 
+import com.taijielan.cookbook.BuildConfig;
 import com.taijielan.cookbook.CookApplication;
 import com.taijielan.cookbook.base.u.CookieInterceptor;
-import com.taijielan.cookbook.model.FoodModel;
 
 import java.util.concurrent.TimeUnit;
 

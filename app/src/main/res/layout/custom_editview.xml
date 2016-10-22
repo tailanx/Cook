@@ -11,7 +11,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-
             <ImageView
                 android:id="@+id/iv_back"
                 android:layout_width="wrap_content"
@@ -19,14 +18,24 @@
                 android:src="@drawable/btn_closed_red" />
             <TextView
                 android:id="@+id/tv_search"
+                android:layout_marginRight="@dimen/dis_6"
                 android:layout_width="wrap_content"
+                android:background="@drawable/selector_background_r"
+                android:elevation="@dimen/dis_4"
+                android:paddingBottom="@dimen/dis_6"
+                android:paddingLeft="@dimen/dis_12"
+                android:paddingRight="@dimen/dis_12"
+                android:paddingTop="@dimen/dis_6"
                 android:layout_height="wrap_content"
+                android:text="@string/cook_search"
+                android:textColor="@color/color_b2"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dis_35"
+                android:layout_marginRight="@dimen/dis_12"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/iv_back"
                 android:layout_toLeftOf="@+id/tv_search"
@@ -38,7 +47,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/dis_8"
-                    android:src="@drawable/search_46" />
+
+                    android:src="@drawable/topsearch_icon" />
 
                 <EditText
                     android:id="@+id/et_content"
@@ -46,25 +56,32 @@
                     android:layout_height="match_parent"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/dis_15"
+                    android:cursorVisible="true"
+                    android:textCursorDrawable="@drawable/view_cusor"
                     android:layout_toRightOf="@+id/iv_search"
                     android:background="@null"
+                    android:singleLine="true"
+                    android:imeOptions="actionSearch"
                     android:hint="@string/app_name"
                     android:textColor="@color/color_b1"
                     android:textColorHint="@color/color_b7"
                     android:textSize="@dimen/dis_14sp" />
 
                 <ImageView
+                    android:id="@+id/iv_delete"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
+                    android:paddingRight="@dimen/dis_4"
+                    android:paddingTop="@dimen/dis_8"
+                    android:paddingLeft="@dimen/dis_8"
+                    android:paddingBottom="@dimen/dis_8"
+                    android:visibility="gone"
                     android:layout_marginRight="@dimen/dis_15"
                     android:src="@drawable/x_46" />
 
             </RelativeLayout>
-
-
-
 
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>

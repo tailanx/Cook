@@ -12,11 +12,11 @@
         <RelativeLayout
             android:id="@+id/re_search"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dis_20"
+            android:layout_height="@dimen/dis_35"
             android:layout_marginBottom="@dimen/dis_12"
+            android:layout_marginLeft="@dimen/dis_20"
+            android:layout_marginTop="@dimen/dis_8"
             android:layout_marginRight="@dimen/dis_20"
-            android:layout_marginTop="@dimen/dis_12"
             android:background="@drawable/background_selector_r">
 
             <ImageView
@@ -34,9 +34,8 @@
                 android:layout_marginLeft="@dimen/dis_12"
                 android:layout_toRightOf="@+id/tv_top"
                 android:drawablePadding="@dimen/dis_12"
+                android:layout_centerVertical="true"
                 android:gravity="center_horizontal"
-                android:paddingBottom="@dimen/dis_12"
-                android:paddingTop="@dimen/dis_12"
                 android:text="@string/cook_menu"
                 android:textColor="@color/color_b4" />
         </RelativeLayout>
