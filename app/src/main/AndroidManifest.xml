@@ -24,6 +24,10 @@
             android:name=".ui.activity.SearchFoodActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateVisible|adjustPan" />
+
+        <activity
+            android:name=".ui.activity.SearchDetailActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

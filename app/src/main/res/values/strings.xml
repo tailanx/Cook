@@ -24,4 +24,6 @@
     <string name="clear_history">清空历史记录</string>
     <string name="history_data">历史搜索</string>
     <string name="search_content_null">搜索的内容不能为空</string>
+    <string name="search_count">次浏览</string>
+    <string name="search_fav">人收藏</string>
 </resources>

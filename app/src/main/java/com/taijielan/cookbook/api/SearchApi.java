@@ -1,11 +1,9 @@
 package com.taijielan.cookbook.api;
 
+import com.taijielan.cookbook.bean.DetailCookBean;
 import com.taijielan.cookbook.bean.SearchBean;
 
-import java.util.List;
-
 import retrofit2.http.GET;
-import retrofit2.http.POST;
 import retrofit2.http.Query;
 import rx.Observable;
 
@@ -21,5 +19,9 @@ import rx.Observable;
 
 public interface SearchApi {
     @GET("api/cook/name")
-    Observable<List<SearchBean>> searchByName(@Query("name") String name);
+    Observable<SearchBean> searchByName(@Query("name") String name);
+
+    @GET("api/cook/show")
+    Observable<DetailCookBean> searchDeatail(@Query("id") String id);
+
 }

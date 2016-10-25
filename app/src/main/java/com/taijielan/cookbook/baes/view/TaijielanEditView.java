@@ -40,6 +40,17 @@ public class TaijielanEditView extends RelativeLayout implements View.OnClickLis
     private EditText etView;
     private Context context;
     private SearchCallBack searchCallBack;
+    private OnEditViewClick onEditViewClick;
+
+    public void setHintText(String hintText) {
+        etView.setText("");
+        etView.setCursorVisible(false);
+        etView.setHint(hintText);
+    }
+
+    public void setOnEditViewClick(OnEditViewClick onEditViewClick) {
+        this.onEditViewClick = onEditViewClick;
+    }
 
     public void setSearchCallBack(SearchCallBack searchCallBack) {
         this.searchCallBack = searchCallBack;
@@ -103,7 +114,7 @@ public class TaijielanEditView extends RelativeLayout implements View.OnClickLis
         this.addView(view);
     }
 
-    @OnClick({R.id.iv_back, R.id.tv_search, R.id.iv_delete})
+    @OnClick({R.id.iv_back, R.id.tv_search, R.id.iv_delete, R.id.et_content})
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -115,6 +126,11 @@ public class TaijielanEditView extends RelativeLayout implements View.OnClickLis
                 break;
             case R.id.iv_back:
                 ((Activity) context).finish();
+                break;
+            case R.id.et_content:
+                if(null != onEditViewClick){
+                    onEditViewClick.onEditViewClick();
+                }
                 break;
             default:
                 break;
@@ -132,7 +148,22 @@ public class TaijielanEditView extends RelativeLayout implements View.OnClickLis
         }
     }
 
+    public String getContent() {
+        return etView.getText().toString();
+    }
+
+    public interface OnEditViewClick {
+        void onEditViewClick();
+    }
+
     public interface SearchCallBack {
         void onClick(String s);
+    }
+
+    public void setShowCusor(){
+        if(null != etView && 0 != hintText){
+            etView.setCursorVisible(true);
+            etView.setHint(hintText);
+        }
     }
 }

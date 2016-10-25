@@ -1,15 +1,11 @@
 package com.taijielan.cookbook;
 
 import android.app.Application;
-import android.util.Log;
 
-import com.taijielan.cookbook.api.IApi;
 import com.taijielan.cookbook.component.CookComponent;
 import com.taijielan.cookbook.component.DaggerCookComponent;
 import com.taijielan.cookbook.module.ApiModule;
 import com.taijielan.cookbook.module.AppModule;
-
-import javax.inject.Inject;
 
 /**
  * @author 作者  admin

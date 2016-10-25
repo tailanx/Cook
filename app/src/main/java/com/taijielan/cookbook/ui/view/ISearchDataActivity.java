@@ -1,9 +1,5 @@
 package com.taijielan.cookbook.ui.view;
 
-import com.taijielan.cookbook.bean.SearchBean;
-
-import java.util.List;
-
 /**
  * @author 作者  admin
  * @类名
@@ -14,8 +10,8 @@ import java.util.List;
  * @修改内容
  */
 
-public interface ISearchDataActivity {
-    void searchData(List<SearchBean> searchBeen);
+public interface ISearchDataActivity<T> {
+    void searchData(T searchBeen);
     void error();
 
 }
