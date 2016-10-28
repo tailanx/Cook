@@ -1,10 +1,15 @@
 package com.taijielan.cookbook.ui.activity;
 
 import android.content.Intent;
-import android.os.Handler;
 import android.view.WindowManager;
 
 import com.taijielan.cookbook.R;
+import com.taijielan.cookbook.base.u.TaijielanConstant;
+
+import java.util.concurrent.TimeUnit;
+
+import cn.bmob.v3.Bmob;
+import rx.Observable;
 
 /**
  * @author 作者  admin
@@ -29,10 +34,13 @@ public class SplashActivity extends BaseActivity {
 
     @Override
     public void initView() {
-        new Handler().postDelayed(() -> {
-            startActivity(new Intent(this, MainActivity.class));
-            this.finish();
-        }, 2500);
+        Bmob.initialize(this, TaijielanConstant.BMOB_KEY);
+
+        Observable.timer(4, TimeUnit.SECONDS).subscribe(aLong -> {
+            startActivity(new Intent(SplashActivity.this, MainActivity.class));
+            SplashActivity.this.finish();
+        });
+
     }
 
 

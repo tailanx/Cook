@@ -10,6 +10,7 @@ buildscript {
         // 配置信息
         classpath 'me.tatarka:gradle-retrolambda:3.2.5'
 
+
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -18,6 +19,8 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        //Bmob的maven仓库地址--必填
+        maven { url "https://raw.github.com/bmob/bmob-android-sdk/master" }
     }
 }
 
@@ -35,7 +38,7 @@ ext {
     versionName = "1.0.0";
     applicationId = "com.yueniapp.shop"
 }
-def supportVersion = "24.1.1";
+def supportVersion = "24.2.1";
 def picassoVersin = "2.5.2";
 def dagger2Version = "2.0.2";
 def dagger2Provided = "10.0-b28";
@@ -46,6 +49,9 @@ def rxAndroidVersion = "1.1.0";
 def umengVerion = "latest.integration";
 def materialVersion = "0.9.0.2";
 def bannerVerion = "2.0.5";
+def scalars = "2.0.0";
+def bmob = "3.5.0";
+def legacy = "1.0";
 project.ext {
     libSupportAppcompat = "com.android.support:appcompat-v7:${supportVersion}";
     libcompat = "com.android.support:appcompat-v7:${supportVersion}";
@@ -58,8 +64,11 @@ project.ext {
     libRetrofit = "com.squareup.retrofit2:retrofit:${retrofitVersion}";
     libRxJava = "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}";
     libLogger = "com.squareup.okhttp3:logging-interceptor:${loggerVersion}";
-    libRxAndroid = "io.reactivex:rxandroid:${rxAndroidVersion}";
+//    libRxAndroid = "io.reactivex:rxandroid:${rxAndroidVersion}";
     libUmeng = "com.umeng.analytics:analytics:${umengVerion}";
     libBanner = "com.bigkoo:convenientbanner:${bannerVerion}";
+    libScalars = "com.squareup.retrofit2:converter-scalars:${scalars}";
+    libBmob = "cn.bmob.android:bmob-sdk:${bmob}";
+    libLegacy = "cn.bmob.android:http-legacy:${legacy}";
 //    libMaterial = "com.afollestad.material-dialogs:commons:${materialVersion}";
 }

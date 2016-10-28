@@ -12,6 +12,7 @@ android {
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        useLibrary 'org.apache.http.legacy'
     }
     buildTypes {
         release {
@@ -31,6 +32,13 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    sourceSets {
+        main.jniLibs.srcDirs = ['libs']
+    }
+    dexOptions {
+        incremental false
+    }
 }
 
 dependencies {
@@ -49,10 +57,22 @@ dependencies {
     compile rootProject.ext.libDagger2Provided
     compile rootProject.ext.libDagger2InjectProvided
     compile rootProject.ext.libGson
+    //    compile('com.squareup.retrofit2:converter-gson:2.1.0')
+    //            {
+    //                exclude group: 'com.google.code.gson'
+    //                exclude group: 'com.squareup.okhttp3'
+    //            }
     compile rootProject.ext.libRetrofit
+    //    compile('com.squareup.retrofit2:retrofit:2.1.0')
+    //            { exclude group: 'com.squareup.okhttp3' }
     compile rootProject.ext.libRxJava
+    //    compile('com.squareup.retrofit2:adapter-rxjava:2.1.0')
+    //            {
+    //                exclude group: 'io.reactivex'
+    //                exclude group: 'com.squareup.okhttp3'
+    //            }
     compile rootProject.ext.libLogger
-    compile rootProject.ext.libRxAndroid
+    //    compile rootProject.ext.libRxAndroid
     compile rootProject.ext.libUmeng
     compile rootProject.ext.libBanner
     compile files('libs/SocialSDK_QQZone_3.jar')
@@ -60,5 +80,8 @@ dependencies {
     compile files('libs/SocialSDK_WeiXin_2.jar')
     compile files('libs/umeng_social_sdk.jar')
     compile files('libs/jsoup-1.7.2.jar')
-    compile 'com.squareup.retrofit2:converter-scalars:2.0.0'
+    compile rootProject.ext.libScalars
+    //3.5.0：请务必查看下面注释[1]
+    compile rootProject.ext.libBmob
+    compile rootProject.ext.libLegacy
 }

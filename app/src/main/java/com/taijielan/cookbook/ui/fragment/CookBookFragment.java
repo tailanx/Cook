@@ -66,7 +66,6 @@ public class CookBookFragment extends BaseFramgment implements ICookBookFragment
     public void initView() {
         lists = new ArrayList<>();
         cookAdapter = new CookAdapter(getActivity(), lists);
-
         cookBookPresent = new CookBookPresent(this, foodModel);
         cookBookPresent.getBannerData();
         cookBookPresent.getRefrshData(COOK_TYPE, page, lm);
@@ -134,8 +133,5 @@ public class CookBookFragment extends BaseFramgment implements ICookBookFragment
         if (v.getId() == R.id.re_search) {
             startActivity(SearchFoodActivity.class);
         }
-
     }
-
-
 }
