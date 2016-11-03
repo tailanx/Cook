@@ -1,1 +1,1 @@
-include ':app', ':xListView', ':vitamio'
+include ':app', ':xListView', ':vitamio', ':SMSSDK'
