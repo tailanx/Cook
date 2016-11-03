@@ -54,7 +54,6 @@ def bmob = "3.5.0";
 def legacy = "1.0";
 project.ext {
     libSupportAppcompat = "com.android.support:appcompat-v7:${supportVersion}";
-    libcompat = "com.android.support:appcompat-v7:${supportVersion}";
     libMaterial = "com.android.support:design:${supportVersion}"
     libPicasso = "com.squareup.picasso:picasso:${picassoVersin}";
     libDagger2Compile = "com.google.dagger:dagger:${dagger2Version}";
@@ -64,7 +63,7 @@ project.ext {
     libRetrofit = "com.squareup.retrofit2:retrofit:${retrofitVersion}";
     libRxJava = "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}";
     libLogger = "com.squareup.okhttp3:logging-interceptor:${loggerVersion}";
-//    libRxAndroid = "io.reactivex:rxandroid:${rxAndroidVersion}";
+    libRxAndroid = "io.reactivex:rxandroid:${rxAndroidVersion}";
     libUmeng = "com.umeng.analytics:analytics:${umengVerion}";
     libBanner = "com.bigkoo:convenientbanner:${bannerVerion}";
     libScalars = "com.squareup.retrofit2:converter-scalars:${scalars}";

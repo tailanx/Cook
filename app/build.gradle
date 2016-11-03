@@ -38,6 +38,7 @@ android {
     }
     dexOptions {
         incremental false
+//        preDexLibraries = false
     }
 }
 
@@ -49,8 +50,8 @@ dependencies {
     //    compile 'com.android.support:appcompat-v7:24.2.1'
     compile files('libs/xUtils-2.6.14.jar')
     compile project(':xListView')
+    compile project(':vitamio')
     compile rootProject.ext.libSupportAppcompat
-    compile rootProject.ext.libcompat
     compile rootProject.ext.libMaterial
     compile rootProject.ext.libPicasso
     compile rootProject.ext.libDagger2Compile
@@ -72,7 +73,11 @@ dependencies {
     //                exclude group: 'com.squareup.okhttp3'
     //            }
     compile rootProject.ext.libLogger
-    //    compile rootProject.ext.libRxAndroid
+    //    compile('com.squareup.okhttp3:logging-interceptor:3.1.2')
+    //            {
+    //                exclude group: 'com.squareup.okhttp3'
+    //            }
+        compile rootProject.ext.libRxAndroid
     compile rootProject.ext.libUmeng
     compile rootProject.ext.libBanner
     compile files('libs/SocialSDK_QQZone_3.jar')
@@ -81,7 +86,12 @@ dependencies {
     compile files('libs/umeng_social_sdk.jar')
     compile files('libs/jsoup-1.7.2.jar')
     compile rootProject.ext.libScalars
+    //    compile('com.squareup.retrofit2:converter-scalars:2.0.0')
+    //            {
+    //                exclude group: 'com.squareup.okhttp3'
+    //            }
     //3.5.0：请务必查看下面注释[1]
-    compile rootProject.ext.libBmob
-    compile rootProject.ext.libLegacy
+    //    compile rootProject.ext.libBmob
+    //    compile rootProject.ext.libLegacy
+    compile files('libs/BmobSDK_V3.4.7_0518.jar')
 }

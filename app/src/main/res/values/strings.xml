@@ -26,4 +26,9 @@
     <string name="search_content_null">搜索的内容不能为空</string>
     <string name="search_count">次浏览</string>
     <string name="search_fav">人收藏</string>
+    <string name="no_more_data">没有更多数据了</string>
+    <string name="vedio_teach">视频教学</string>
+    <string name="go_to_ready_vedio">视频准备中，请耐心等待。</string>
+    <string name="go_to_ready">准备好</string>
+    <string name="go_to_error">播放出错</string>
 </resources>

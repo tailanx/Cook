@@ -16,4 +16,9 @@
     <color name="color_b10">#ff4c39</color>
     <color name="color_b11">#f4621e</color>
 
+    <color name="recycler_color1">#bc9191</color>
+    <color name="recycler_color2">#edd36a</color>
+    <color name="recycler_color3">#82c1f9</color>
+    <color name="recycler_color4">#68d661</color>
+
 </resources>

@@ -35,7 +35,7 @@
             android:id="@+id/rb_friend"
             style="@style/home_main_viewgroup"
             android:drawableTop="@drawable/home_view3"
-            android:text="@string/home_friend" />
+            android:text="@string/home_vadio" />
 
         <RadioButton
             android:id="@+id/rb_me"

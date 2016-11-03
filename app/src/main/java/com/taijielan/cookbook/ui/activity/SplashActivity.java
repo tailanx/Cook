@@ -1,14 +1,18 @@
 package com.taijielan.cookbook.ui.activity;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.WindowManager;
 
 import com.taijielan.cookbook.R;
 import com.taijielan.cookbook.base.u.TaijielanConstant;
+import com.taijielan.cookbook.bmobbean.VedioBmobBean;
 
 import java.util.concurrent.TimeUnit;
 
 import cn.bmob.v3.Bmob;
+import cn.bmob.v3.BmobConfig;
+import cn.bmob.v3.listener.SaveListener;
 import rx.Observable;
 
 /**
@@ -35,6 +39,23 @@ public class SplashActivity extends BaseActivity {
     @Override
     public void initView() {
         Bmob.initialize(this, TaijielanConstant.BMOB_KEY);
+        BmobConfig bmobConfig = new BmobConfig.Builder(this).setApplicationId(TaijielanConstant.BMOB_KEY).setConnectTimeout(30).setFileExpiration(2500).setUploadBlockSize(1024 * 1024).build();
+        Bmob.initialize(bmobConfig);
+//        VedioBmobBean vedioBmobBean = new VedioBmobBean();
+//        vedioBmobBean.setName("测试");
+//        vedioBmobBean.save(this, new SaveListener() {
+//
+//            @Override
+//            public void onSuccess() {
+//                Log.e("okhttp", "创建成功");
+//            }
+//
+//            @Override
+//            public void onFailure(int i, String s) {
+//                Log.e("okhttp", "创建失败");
+//
+//            }
+//        });
 
         Observable.timer(4, TimeUnit.SECONDS).subscribe(aLong -> {
             startActivity(new Intent(SplashActivity.this, MainActivity.class));

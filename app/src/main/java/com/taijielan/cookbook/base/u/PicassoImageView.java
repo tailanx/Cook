@@ -6,6 +6,7 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.ImageView;
 
@@ -66,8 +67,11 @@ public class PicassoImageView extends ImageView {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 Drawable drawable = getDrawable();
-                drawable.mutate().setColorFilter(Color.GRAY, PorterDuff.Mode.MULTIPLY);
+                if (null != drawable) {
+                    drawable.mutate().setColorFilter(Color.GRAY, PorterDuff.Mode.MULTIPLY);
+                }
                 break;
+            case MotionEvent.ACTION_MOVE:
             case MotionEvent.ACTION_CANCEL:
             case MotionEvent.ACTION_UP:
                 clearFilter();

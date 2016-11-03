@@ -1,1 +1,1 @@
-include ':app', ':xListView'
+include ':app', ':xListView', ':vitamio'

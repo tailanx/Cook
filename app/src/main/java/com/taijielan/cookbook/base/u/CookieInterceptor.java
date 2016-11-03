@@ -31,22 +31,23 @@ import okhttp3.Response;
  * @修改内容
  */
 public class CookieInterceptor implements Interceptor {
-    private String appid = "2";
-    //设备的唯一标示
-    private String did;
-    //用户的useragent
-    private String useragent;
-    //版本信息
-    private String appVer;
-    @Inject
-    protected Context context;
 
-//    {
-//        did = SharePrenerceUtil.getStrData(ShopApplication.getInstance().getApplicationContext(), DEVICE_INFO_ID);
-//        useragent = SharePrenerceUtil.getStrData(ShopApplication.getInstance().getApplicationContext(), PrenerceKeyConstant.USER_AGENT);
-//        appVer = SharePrenerceUtil.getStrData(ShopApplication.getInstance().getApplicationContext(), PrenerceKeyConstant.APP_VERION);
-//    }
-
+//    private String appid = "2";
+//    //设备的唯一标示
+//    private String did;
+//    //用户的useragent
+//    private String useragent;
+//    //版本信息
+//    private String appVer;
+//    @Inject
+//    protected Context context;
+//
+////    {
+////        did = SharePrenerceUtil.getStrData(ShopApplication.getInstance().getApplicationContext(), DEVICE_INFO_ID);
+////        useragent = SharePrenerceUtil.getStrData(ShopApplication.getInstance().getApplicationContext(), PrenerceKeyConstant.USER_AGENT);
+////        appVer = SharePrenerceUtil.getStrData(ShopApplication.getInstance().getApplicationContext(), PrenerceKeyConstant.APP_VERION);
+////    }
+//
     @Inject
     public CookieInterceptor() {
     }

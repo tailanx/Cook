@@ -40,6 +40,11 @@
             android:name=".ui.activity.SearchDetailActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".ui.activity.VedioActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="landscape" />
 
     </application>
 
