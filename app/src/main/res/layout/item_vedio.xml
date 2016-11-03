@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/re_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dis_16"
+    android:layout_marginLeft="@dimen/dis_12"
+    android:layout_marginRight="@dimen/dis_12"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textColor="@color/color_b1"
+        android:textSize="@dimen/dis_14sp" />
+
+
+    <com.taijielan.cookbook.base.u.PicassoImageView
+        android:id="@+id/iv_content"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="@dimen/dis_6"
+        android:scaleType="centerCrop" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/dis_20"
+        android:layout_marginRight="@dimen/dis_20"
+        android:src="@drawable/video_list_icon" />
+
+
+</RelativeLayout>
