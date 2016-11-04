@@ -31,4 +31,5 @@
     <string name="go_to_ready_vedio">视频准备中，请耐心等待。</string>
     <string name="go_to_ready">准备好</string>
     <string name="go_to_error">播放出错</string>
+    <string name="user_center">个人中心</string>
 </resources>
